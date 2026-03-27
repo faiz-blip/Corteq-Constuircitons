@@ -4,7 +4,7 @@ export const SITE = {
   tagline: "Building Infrastructure. Protecting Communities.",
   description:
     "FEMA-certified floodplain management, construction, storm sewer design, and engineering consulting for federal, commercial, and municipal clients.",
-  phone: "(346) 296-7800",
+  phone: "(346) 399-1838",
   email: "contact@corteqsolutions.com",
   parentUrl: "https://corteqsolutions.com",
 } as const;
