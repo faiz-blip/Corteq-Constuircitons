@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, ExternalLink } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 import Button from "@/components/ui/Button";
 
@@ -12,6 +12,18 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-sm">
+      {/* Parent company banner */}
+      <div className="bg-brand-dark-bg text-center">
+        <a
+          href={SITE.parentUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-1.5 text-xs text-white/70 transition-colors hover:text-white"
+        >
+          A division of Corteq Solutions LLC — Visit our main site
+          <ExternalLink size={10} />
+        </a>
+      </div>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center gap-2">
           <span className="text-xl font-bold text-brand-blue">CORTEQ</span>
