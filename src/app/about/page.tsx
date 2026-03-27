@@ -1,4 +1,5 @@
 import { type Metadata } from "next";
+import Image from "next/image";
 import { Award, Users, Target, Shield } from "lucide-react";
 import HeroBanner from "@/components/ui/HeroBanner";
 import CTABanner from "@/components/ui/CTABanner";
@@ -34,8 +35,14 @@ export default function AboutPage() {
                 Operating across the United States, our team has completed over 150 projects for federal agencies, municipalities, and private clients. We specialize in the intersection of regulatory compliance and practical construction — ensuring every project meets the highest standards of safety, quality, and environmental stewardship.
               </p>
             </div>
-            <div className="flex h-72 items-center justify-center rounded-lg bg-gradient-to-br from-brand-blue/20 to-brand-dark-navy/20">
-              <span className="text-sm text-brand-text-secondary">Company Photo</span>
+            <div className="relative h-72 overflow-hidden rounded-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80"
+                alt="Corteq Solutions construction team at work"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>

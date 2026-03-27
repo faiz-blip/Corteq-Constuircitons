@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface ProjectCardProps {
   slug: string;
@@ -14,8 +15,14 @@ export default function ProjectCard({ slug, title, location, serviceTag, image }
       href={`/portfolio/${slug}`}
       className="group block overflow-hidden rounded-lg border border-gray-200 bg-white transition-all duration-200 hover:shadow-lg"
     >
-      <div className={`flex h-48 items-center justify-center bg-gradient-to-br ${image} transition-transform duration-300 group-hover:scale-105`}>
-        <span className="text-sm font-medium text-white/60">Project Photo</span>
+      <div className="relative h-48 overflow-hidden">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        />
       </div>
       <div className="p-4">
         <span className="inline-block rounded-full bg-brand-blue/10 px-2 py-0.5 text-xs font-medium text-brand-blue">{serviceTag}</span>

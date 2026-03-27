@@ -1,6 +1,7 @@
 import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, MapPin, Tag } from "lucide-react";
 import CTABanner from "@/components/ui/CTABanner";
 import { projects } from "@/data/projects";
@@ -33,8 +34,15 @@ export default async function ProjectDetailPage({
 
   return (
     <>
-      <section className={`flex h-64 items-center justify-center bg-gradient-to-br ${project.image} md:h-80`}>
-        <span className="text-lg font-medium text-white/60">Project Photo</span>
+      <section className="relative h-64 md:h-80">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
       </section>
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4">
