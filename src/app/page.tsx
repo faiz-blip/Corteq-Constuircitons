@@ -1,12 +1,19 @@
-import { services } from "@/data/services";
+import HeroSection from "@/components/sections/HeroSection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import StatsCounter from "@/components/ui/StatsCounter";
+import WhyCorteq from "@/components/sections/WhyCorteq";
+import FeaturedProjects from "@/components/sections/FeaturedProjects";
+import CTABanner from "@/components/ui/CTABanner";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-brand-blue">Corteq Solutions LLC</h1>
-        <p className="mt-2 text-brand-text-secondary">{services.length} services loaded</p>
-      </div>
-    </main>
+    <>
+      <HeroSection />
+      <ServicesSection />
+      <StatsCounter />
+      <WhyCorteq />
+      <FeaturedProjects />
+      <CTABanner />
+    </>
   );
 }
